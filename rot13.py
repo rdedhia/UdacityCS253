@@ -1,3 +1,5 @@
+#google_appengine/appcfg.py update google_appengine/helloudacity
+
 import webapp2
 import cgi
 
@@ -10,7 +12,7 @@ form = """
 
 <html>
   <head>
-    <title>Unit 2 Rot13</title>
+    <title>CS253 Rot13</title>
   </head>
   <body>
 	<h4>ROT13, which is short for rotate by 13 places, is a letter
@@ -18,7 +20,7 @@ form = """
 	13 letters before or after it in the alphabet.</h4>
 	<h2>Enter some text to Rot13:</h2>
 	<form method="post">
-	  <textarea name="flip"
+	  <textarea name="text"
 	  style="height: 100px; width: 400px;">%(flip)s</textarea>
 	<br>
 	<input type="submit">
@@ -36,7 +38,7 @@ class Rot13(webapp2.RequestHandler):
 
 	def post(self):
 		flipped = ""
-		flip = self.request.get('flip')
+		flip = self.request.get('text')
 		alphabet = 'abcdefghijklmnopqrstuvwxyz'
 		for letter in flip:
 			if letter.lower() in alphabet:
