@@ -101,6 +101,6 @@ class ThanksHandler(webapp2.RequestHandler):
 		self.response.out.write('Thanks!')
 
 app = webapp2.WSGIApplication([('/', MainPage),
-								('/thanks', ThanksHandler),]
+								('/thanks', ThanksHandler)]
 								, debug=True)
 

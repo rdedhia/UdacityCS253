@@ -11,5 +11,11 @@ handlers:
 - url: /rot13
   script: rot13.app
 
+- url: /signup
+  script: signup.app
+
+- url: /signup/.*
+  script: signup.app
+
 - url: /.*
   script: udacity-2016.app
