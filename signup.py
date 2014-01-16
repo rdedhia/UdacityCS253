@@ -29,34 +29,43 @@ def mail_check(email):
 		return "No email"
 
 form = """
-<h2>Signup</h2>
-<form method="post">
-	<label>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CS253 Sign Up Form</title>
+  </head>
+  <body>
+	<h2>Signup</h2>
+	<form method="post">
+	  <label>
 		Username
 		<input type="text" name="username" value="%(username)s">
 		<span style="color:red">%(u_error)s</span>
-	</label>
-	<br>
-	<label>
+	  </label>
+	  <br>
+	  <label>
 		Password
 		<input type="password" name="password" value="%(password)s">
 		<span style="color:red">%(p_error)s</span>
-	</label>
-	<br>
-	<label>
+	  </label>
+	  <br>
+	  <label>
 		Verify Password
 		<input type="password" name="verify" value="%(verify)s">
 		<span style="color:red">%(v_error)s</span>
-	</label>
-	<br>
-	<label>
+	  </label>
+	  <br>
+	  <label>
 		Email (optional)
 		<input type="text" name="email" value="%(email)s">
 		<span style="color:red">%(error)s</span>
-	</label>
-	<br><br>
-	<input type="submit">
-</form>
+	  </label>
+	  <br>
+	  <br>
+	  <input type="submit">
+	</form>
+  </body>
+</html>
 """
 
 class SignUp(webapp2.RequestHandler):
