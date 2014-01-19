@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CS253 Blog</title>
+  </head>
+  <body>
+    <h1>/Blog/</h1>
+    <form method="post">
+      <label>
+        Subject
+        <br>
+        <input type="text" name="subject" value="{{subject}}">
+      </label><br><br>
+
+      <label>
+        Content
+        <br>
+        <textarea name="content">{{content}}</textarea>
+      </label><br>
+
+      <div style="color:red" class="error">{{error}}</div><br>
+
+      <input type="submit">
+    </form>
+  </body>
+</html>

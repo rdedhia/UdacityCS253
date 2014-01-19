@@ -17,5 +17,18 @@ handlers:
 - url: /signup/.*
   script: signup.app
 
+- url: /blog
+  script: blog.app
+
+- url: /blog/.*
+  script: blog.app
+
 - url: /.*
   script: udacity-2016.app
+
+libraries:
+- name: webapp2
+  version: "2.5.1"
+
+- name: jinja2
+  version: latest
